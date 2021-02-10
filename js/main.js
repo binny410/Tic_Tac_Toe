@@ -36,7 +36,7 @@ $(document).ready(function () {
                 if (value == true) {
                     setTimeout(function () {
                         $(".winMessage").addClass("show");
-                        $(".winText").text("X WINS!! ")
+                        $(".middle").text("X WINS!! ")
                         $(".box").removeClass("x || o");
                     }, 200)
                 }
@@ -57,7 +57,7 @@ $(document).ready(function () {
                 if (value == true) {
                     setTimeout(function () {
                         $(".winMessage").addClass("show");
-                        $(".winText").text("O WINS!! ")
+                        $(".middle").text("O WINS!! ")
                         $(".box").removeClass("x || o");
                     }, 200)
 
@@ -108,7 +108,7 @@ function draw() {
     if (blocks == blockClass) {
         setTimeout(function () {
             $(".winMessage").addClass("show");
-            $(".winText").text("MATCH DRAW! ")
+            $(".middle").text("MATCH DRAW! ")
             $(".box").removeClass("x || o");
         }, 200)
     }

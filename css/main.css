@@ -11,9 +11,8 @@
 
 body {
     margin: 0;
-    background-color: lavender;
-    border: 5px dotted orange;
-    border-radius: 10px;
+    border: 5px solid #f1f1f1;
+    background-color: #f2d1c2;
 }
 
 #title {
@@ -21,10 +20,15 @@ body {
     margin-top: 5px;
 }
 
+.foot {
+    border-top: 1px solid #f1f1f1;
+}
+
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
+    background: #f2d1c2;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
     align-content: center;
@@ -35,7 +39,7 @@ body {
 .box {
     width: var(--cell-size);
     height: var(--cell-size);
-    border: 1px solid black;
+    border: 2px solid #518a7b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,12 +76,12 @@ body {
 
 .box.x::before,
 .box.x::after {
-    background-color: #d0517a;
+    background-color: #405955;
 }
 
 .container.x .box:not(.x):not(.o):hover::before,
 .container.x .box:not(.x):not(.o):hover::after {
-    background-color: #efa8bf;
+    background-color: #678c86;
 }
 
 .box.x::before,
@@ -103,11 +107,11 @@ body {
 /*Creating O using pseudo elements*/
 
 .box.o::before {
-    background-color: #3f48cc;
+    background-color: #d59066;
 }
 
 .container.o .box:not(.x):not(.o):hover::before {
-    background-color: #7c7cb7;
+    background-color: #d8a788;
 }
 
 .box.o::before,
@@ -130,7 +134,7 @@ body {
 .container.o .box:not(.x):not(.o):hover::after {
     width: calc(var(--mark-size)* .7);
     height: calc(var(--mark-size)* .7);
-    background-color: lavender;
+    background-color: #f2d1c2;
 }
 
 /*Pointer not allowed on X or O cells*/
@@ -152,7 +156,7 @@ body {
     opacity: 0.9;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    /*    font-size: 2em;*/
     color: black;
     font-family: fantasy;
     flex-direction: column;
@@ -162,10 +166,10 @@ body {
 /* Designing button within win message div*/
 .startMessage button,
 .winMessage button {
-    font-size: 3rem;
+    font-size: 2rem;
     border: 1px solid orange;
     background-color: white;
-    padding: .25em .5em;
+    /*    padding: .25em .5em;*/
     cursor: pointer;
     font-family: fantasy;
 }
@@ -185,4 +189,32 @@ body {
 .noughts,
 .crosses {
     margin: 5px;
+}
+
+p.middle {
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    p.middle {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    p.middle {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    p.middle {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    p.middle {
+        font-size: 4rem;
+    }
 }
